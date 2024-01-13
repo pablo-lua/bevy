@@ -269,6 +269,12 @@ impl TextBundle {
         self.text.linebreak_behavior = BreakLineOn::NoWrap;
         self
     }
+
+    /// Returns this [`TextBundle`] with a new [`Visibility`].
+    pub const fn with_visibility(mut self, visibility: Visibility) -> Self {
+        self.visibility = visibility;
+        self
+    }
 }
 
 #[cfg(feature = "bevy_text")]
